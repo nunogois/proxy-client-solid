@@ -1,6 +1,6 @@
 {
   "name": "@nunogois/proxy-client-solid",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Solid interface for working with Unleash",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
