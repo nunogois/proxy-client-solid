@@ -21,7 +21,7 @@ pnpm i @nunogois/proxy-client-solid
 Import the provider like this in your entrypoint file (typically index.jsx/tsx):
 
 ```jsx
-import FlagProvider from '@nunogois/proxy-client-solid'
+import { FlagProvider } from '@nunogois/proxy-client-solid'
 
 const config = {
   url: 'https://HOSTNAME/proxy',
@@ -44,7 +44,7 @@ render(
 Alternatively, you can pass your own client in to the FlagProvider:
 
 ```jsx
-import FlagProvider, { UnleashClient } from '@nunogois/proxy-client-solid'
+import { FlagProvider, UnleashClient } from '@nunogois/proxy-client-solid'
 
 const config = {
   url: 'https://HOSTNAME/proxy',

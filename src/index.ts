@@ -27,5 +27,3 @@ export {
   useUnleashContext,
   useUnleashClient
 }
-
-export default FlagProvider
