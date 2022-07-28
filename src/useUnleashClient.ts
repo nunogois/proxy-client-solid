@@ -1,9 +1,9 @@
 import { useContext } from 'solid-js'
 import { UnleashClient } from 'unleash-proxy-client'
-import FlagContext from './FlagContext'
+import FlagContext, { IFlagContextValue } from './FlagContext'
 
 const useUnleashClient = (): UnleashClient => {
-  const { client } = useContext(FlagContext)
+  const { client } = useContext<IFlagContextValue>(FlagContext)
   return client as UnleashClient
 }
 

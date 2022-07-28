@@ -1,8 +1,8 @@
 import { useContext } from 'solid-js'
-import FlagContext from './FlagContext'
+import FlagContext, { IFlagContextValue } from './FlagContext'
 
 const useUnleashContext = () => {
-  const { updateContext } = useContext(FlagContext)
+  const { updateContext } = useContext<IFlagContextValue>(FlagContext)
 
   return updateContext
 }

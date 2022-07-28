@@ -1,9 +1,9 @@
 import { createSignal, createEffect, useContext } from 'solid-js'
 
-import FlagContext from './FlagContext'
+import FlagContext, { IFlagContextValue } from './FlagContext'
 
 const useVariant = (name: string) => {
-  const { getVariant, client } = useContext(FlagContext)
+  const { getVariant, client } = useContext<IFlagContextValue>(FlagContext)
   const [variant, setVariant] = createSignal(getVariant(name))
 
   createEffect(() => {

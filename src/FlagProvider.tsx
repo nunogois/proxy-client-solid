@@ -1,6 +1,6 @@
 import { createSignal, createEffect, createMemo } from 'solid-js'
 import type { Component } from 'solid-js'
-import FlagContext from './FlagContext'
+import FlagContext, { IFlagContextValue } from './FlagContext'
 import { UnleashClient, IConfig, IContext } from 'unleash-proxy-client'
 
 type eventArgs = [Function, any]
@@ -9,6 +9,7 @@ interface IFlagProvider {
   config?: IConfig
   unleashClient?: UnleashClient
   startClient?: boolean
+  children?: Element
 }
 
 const FlagProvider: Component<IFlagProvider> = props => {
@@ -72,7 +73,7 @@ const FlagProvider: Component<IFlagProvider> = props => {
   }))
 
   return (
-    <FlagContext.Provider value={context()}>
+    <FlagContext.Provider value={context() as IFlagContextValue}>
       {props.children}
     </FlagContext.Provider>
   )

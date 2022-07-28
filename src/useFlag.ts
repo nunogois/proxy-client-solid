@@ -1,8 +1,8 @@
 import { useContext, createEffect, createSignal } from 'solid-js'
-import FlagContext from './FlagContext'
+import FlagContext, { IFlagContextValue } from './FlagContext'
 
 const useFlag = (name: string) => {
-  const { isEnabled, client } = useContext(FlagContext)
+  const { isEnabled, client } = useContext<IFlagContextValue>(FlagContext)
   const [flag, setFlag] = createSignal(!!isEnabled(name))
 
   createEffect(() => {

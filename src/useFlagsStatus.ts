@@ -1,9 +1,9 @@
 import { useContext } from 'solid-js'
 
-import FlagContext from './FlagContext'
+import FlagContext, { IFlagContextValue } from './FlagContext'
 
 const useFlagsStatus = () => {
-  const { flagsReady, flagsError } = useContext(FlagContext)
+  const { flagsReady, flagsError } = useContext<IFlagContextValue>(FlagContext)
 
   return { flagsReady, flagsError }
 }
